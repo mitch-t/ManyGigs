@@ -10,8 +10,21 @@
     height: 40px;
     text-decoration: none;
     margin-top: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     text-align: center;
+}
+
+#upload-div {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#user-upload {
+    max-height: 300px;
+    max-width: 300px;
+    margin: auto;
 }
 
 #user-description {
@@ -44,7 +57,8 @@
 }
 
 #user-loc,
-#user-amnt {
+#user-amnt,
+#user-contact {
     display: flex;
     justify-content: center;
     background: white;
@@ -86,11 +100,9 @@
     resize: none;
 }
 
-#edit-location {
-    border: none;
-}
-
-#edit-amount {
+#edit-location,
+#edit-amount,
+#edit-contact {
     border: none;
 }
 
@@ -98,7 +110,7 @@
     display: flex;
     justify-content: space-evenly;
     max-width: 400px;
-    margin: 40px auto 0 auto;
+    margin: 40px auto 40px auto;
 }
 
 #edit-btns button {
@@ -122,4 +134,41 @@
 
 #edit-btns button:focus {
     outline: none;
+}
+
+@media screen and (max-width: 576px) {
+
+    #user-ttl {
+        max-width: 200px;
+        height: 80px;
+    }
+
+    #edit-title {
+        width: 80%;
+    }
+
+    #user-loc-amount {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    #user-loc,
+    #user-amnt,
+    #user-contact {
+        margin-bottom: 10px;
+    }
+
+    #description-container {
+        width: 90%;
+    }
+
+    #upload-div {
+        width: 90%;
+    }
+
+    #user-upload {
+        max-height: 200px;
+        max-width: 200px;
+    }
+    
 }

@@ -9,10 +9,11 @@ function SinglePost(props) {
   const { handleLogout } = props;
   const { _id } = useContext(UserContext);
   const [singlePost, setSinglePost] = useState({});
+  const [upload, setUpload] = useState();
 
   // sets state with post data and is editable if post is owned by logged in user
-  const handleSinglePost = () => {
-    API.getSinglePost(window.location.pathname.substr(6)).then((res) => {
+  const handleSinglePost = async () => {
+    await API.getSinglePost(window.location.pathname.substr(6)).then((res) => {
       if (_id === res.data.user) {
         return setSinglePost({ ...res.data, currentUser: true });
       } else {
@@ -21,8 +22,19 @@ function SinglePost(props) {
     });
   };
 
+  // retrieves image using image name from first api call *** using url in this case, using res.data may be possible
+  const handleGetImage = async () => {
+    await API.getSinglePost(window.location.pathname.substr(6)).then((res) => {
+      const uploadImage = res.data.upload;
+      API.getImage(uploadImage).then((res) => {
+        setUpload(res.config.url);
+      });
+    });
+  };
+
   useEffect(() => {
     handleSinglePost();
+    handleGetImage();
   }, []);
 
   const handleEditPost = () => {
@@ -31,13 +43,15 @@ function SinglePost(props) {
     const description = document.getElementById("edit-description").value;
     const location = document.getElementById("edit-location").value;
     const worktype = document.getElementById("edit-worktype").value;
+    const contact = document.getElementById("edit-contact").value;
     API.updatePost(
       singlePost._id,
       title,
       description,
       location,
       amount,
-      worktype
+      worktype,
+      contact
     ).then((res) => {
       alert("Post Updated!");
       console.log(res.config.data);
@@ -57,6 +71,7 @@ function SinglePost(props) {
         <Navbar handleLogout={handleLogout} />
         <CurrentUserPost
           singlePost={singlePost}
+          upload={upload}
           handleEditPost={handleEditPost}
           handleDeletePost={handleDeletePost}
         />
@@ -66,7 +81,7 @@ function SinglePost(props) {
     return (
       <div>
         <Navbar handleLogout={handleLogout} />
-        <NonUserPost singlePost={singlePost} />
+        <NonUserPost singlePost={singlePost} upload={upload} />
       </div>
     );
   }

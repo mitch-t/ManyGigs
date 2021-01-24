@@ -19,3 +19,12 @@
 .post-card:hover{
     background-color: rgb(156, 198, 247);
 }
+
+@media screen and (max-width: 750px) {
+
+    #dash-post-container {
+        grid-template-columns: repeat(2, 3fr);
+        grid-template-rows: repeat(7, 2fr);
+    }
+    
+}

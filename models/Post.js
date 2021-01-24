@@ -33,11 +33,19 @@ const PostSchema = new Schema({
     trim: true,
     required: "location is required",
   },
+  upload: {
+    type: String,
+    trim: true,
+  },
+  contact: {
+    type: String,
+    trim: true,
+  },
   worktype: {
     type: String,
     trim: true,
     required: "worktype is required",
-  }, 
+  },
   worktypeinquiry: {
     type: String,
     trim: true,

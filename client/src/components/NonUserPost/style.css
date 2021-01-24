@@ -21,6 +21,19 @@
     height: 30px;
 }
 
+#upload-div {
+    width: 60%;	    
+    margin: auto;	    
+    text-align: center;	    
+    margin-bottom: 20px;	    
+}	
+
+#post-upload {	
+    max-height: 300px;	    
+    max-width: 300px;	    
+    margin: auto;	   
+}	
+
 #post-description {
     display: flex;
     justify-content: flex-start;
@@ -48,14 +61,47 @@
     justify-content: space-around;
     margin: auto;
     max-width: 800px;
+    margin-bottom: 40px;
 }
 
 #post-loc,
-#post-amnt {
+#post-amnt,
+#post-contact{
     display: flex;
     justify-content: center;
     background: white;
     border-radius: 50px;
     width: 200px;
     height: 35px;
+    max-width: 350px;
+    min-width: 200px;
+    padding: 4px 10px 0 10px;
+    height: 35px;	    
+    margin-bottom: 10px;
+}
+#post-loc p,
+#post-amnt p,
+#post-contact p {
+    font-size: 1.1rem;
+}	
+
+@media screen and (max-width: 576px) {	 
+    #post-ttl {
+        max-width: 200px;	        ;
+        height: 80px;	        
+    }	    
+    #post-loc-amount {
+    flex-direction: column !important;
+    align-items: center;	        
+    }	    
+    #description-container {	    
+        width: 90%;	        
+    }	    
+    #upload-div {
+        width: 90%;	        
+    }	    
+    #post-upload {	    
+        max-height: 200px;	        
+        max-width: 200px;	        
+    }	    
 }
