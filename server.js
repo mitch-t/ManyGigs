@@ -50,7 +50,7 @@ app.get("/upload/:file", function (req, res) {
 require("./routes/api-routes.js")(app);
 
 // allows mongoose to use atlas or local database
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/user", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://mitch-t:Br@ntoe13@stayfit.w13ur.mongodb.net/user?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
