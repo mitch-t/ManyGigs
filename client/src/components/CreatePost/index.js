@@ -31,10 +31,11 @@ function CreatePost(props) {
           <input type="submit" value="Upload Photo" />
         </form>
       </div>
-
+      
       <div id="post-worktype-inquiry">
         <label htmlFor="worktypeinquiry">Looking TO:</label>
         <select id="worktypeinquiry">
+          
           <option value="select">Select</option>
           <option value="Find Work">Find Work</option>
           <option value="Find Worker">Find Worker</option>
