@@ -57,6 +57,11 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/user", {
   useFindAndModify: false,
 });
 
+mongoose.connection.on('connected', () => {
+  console.log('Mongoose is connected');
+})
+
+
 // Send every other request to the React app
 
 app.get("*", (req, res) => {
