@@ -33,7 +33,7 @@ function CreatePost(props) {
       </div>
       
       <div id="post-worktype-inquiry">
-        <label htmlFor="worktypeinquiry">Looking TO:</label>
+        <label htmlFor="worktypeinquiry">Looking To:</label>
         <select id="worktypeinquiry">
           
           <option value="select">Select</option>

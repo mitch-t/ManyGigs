@@ -74,7 +74,14 @@ module.exports = function (app) {
   });
 
   app.post("/api/upload", upload.single("file"), (req, res) => {
-    
+    // upload((err) => {
+    //   if (err) {
+    //     res.render("index", { msg: err });
+    //   } else {
+    //     console.log(req.file);
+    //     res.send("test");
+    //   }
+    // });
     res.json(req.file).status(200);
   });
 
@@ -95,8 +102,7 @@ module.exports = function (app) {
   app.get("/api/user", (req, res) => {
     if (req.user) {
       User.findOne({ username: req.user.username }).then((dbUser) => {
-        res.send(dbUser); 
-  // The req.user stores the entire user that has been authenticated inside of it.
+        res.send(dbUser); // The req.user stores the entire user that has been authenticated inside of it.
       });
     } else {
       res.json({
