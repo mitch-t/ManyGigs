@@ -4,20 +4,22 @@ import "./style.css";
 function Sidebar(props) {
   const { handleFilter, handleReset } = props;
   const work = "Find Work";
-  const worker = "Find Worker";
+  const worker = "Find a Worker";
   return (
     <div id="sidebar-div">
       {/* Find Work dropdowns */}
       <form id="find-work">
         <fieldset>
-          <legend>Find Work</legend>
+          <legend>Find a Worker</legend>
           <p>
             <label>Work Type </label>
             <select id="work-type">
               <option value="select">Select</option>
-              <option value="Delivery & Moving">Delivery & Moving</option>
+              <option value="Transportation & Automotive">Transportation & Automotive</option>
               <option value="Handyman">Handyman</option>
               <option value="IT & Admin">IT & Admin</option>
+              <option value="Education">Education</option>
+              <option value="Other">Other</option>
             </select>
           </p>
           <div className="filter-btn-div">
@@ -33,14 +35,16 @@ function Sidebar(props) {
       {/* Find a Worker dropdown */}
       <form id="find-worker">
         <fieldset>
-          <legend>Find a Worker</legend>
+          <legend>Find Work</legend>
           <p>
             <label>Work Type </label>
             <select id="worker-type">
               <option value="select">Select</option>
-              <option value="Delivery & Moving">Delivery & Moving</option>
+              <option value="Transportation & Automotive">Transportation & Automotive</option>
               <option value="Handyman">Handyman</option>
               <option value="IT & Admin">IT & Admin</option>
+              <option value="Education">Education</option>
+              <option value="Other">Other</option>
             </select>
           </p>
           <div className="filter-btn-div">
