@@ -16,14 +16,14 @@
 * [Credits](#credits) 
 
 ## Features
-ReactJS.
-Node and Express Web Server.
-MongoDB Database with Mongoose ORM.
-Uses CRUD for user posts.
-Deployed using Heroku (with Data).
-Allows authentication of users.
-Polished frontend / UI.
-Folder structure that meets MVC Paradigm.
+* ReactJS.
+* Node and Express Web Server.
+* MongoDB Database with Mongoose ORM.
+* Uses CRUD for user posts.
+* Deployed using Heroku (with Data).
+* Allows authentication of users.
+* Polished frontend / UI.
+* Folder structure that meets MVC Paradigm.
 
 ## Starting
 The site can be found at the following link
