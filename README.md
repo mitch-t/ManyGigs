@@ -1,6 +1,6 @@
 # Many Gigs - Project 3
 
-![GitHub repo size](https://img.shields.io/github/repo-size/tniles320/project-3)!
+![GitHub repo size](https://img.shields.io/github/repo-size/tniles320/project-3)
 
 ## This website was designed to connect freelance workers with gigs in their area based on the zip code provided when creating an account.
 
@@ -8,24 +8,22 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [Requirements](#Requirements)
+* [Features](#Features)
 * [Starting](#Starting)
 * [Usage](#usage)
 * [built](#built)
 * [Screenshots](#Screenshots)
 * [Credits](#credits) 
 
-## Requirements
-Here is what Project 3 requires.
-Must use ReactJS.
-Must use a Node and Express Web Server.
-Must be backed by a MySQL or MongoDB Database with a Sequelize or Mongoose ORM.
-Must have both GET and POST routes for retrieving and adding new data.
-Must be deployed using Heroku (with Data).
-Must utilize at least two libraries, packages, or technologies that we haven't discussed.
-Must allow for or involve the authentication of users in some way.
-Must have a polished frontend / UI.
-Must have folder structure that meets MVC Paradigm.
+## Features
+ReactJS.
+Node and Express Web Server.
+MongoDB Database with Mongoose ORM.
+Uses CRUD for user posts.
+Deployed using Heroku (with Data).
+Allows authentication of users.
+Polished frontend / UI.
+Folder structure that meets MVC Paradigm.
 
 ## Starting
 The site can be found at the following link
@@ -44,7 +42,7 @@ Users need to create an account to view, create, and edit a post. Posts can be f
 * React 
 
 ## Screenshots 
-Will add these later when we have everything finished
+![Screenshot (246)](https://user-images.githubusercontent.com/66184450/107274272-f6ebe400-6a04-11eb-84e0-c3e94d22ccf1.png)
 
 ## Credits
 Taylor Niles
